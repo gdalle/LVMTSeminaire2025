@@ -39,7 +39,7 @@
     "href": "index.html#static-traffic-assignment-theory",
     "title": "Mixing data, simulation and decision",
     "section": "Static traffic assignment (theory)",
-    "text": "Static traffic assignment (theory)\nWhat if conflicting agents cause a slowdown?\n\\[ t_e(f_e) = t_e^0 \\left[1 + \\alpha \\left(\\frac{f_e}{c_e}\\right)^\\beta \\right] \\enspace \\text{with} \\enspace \\begin{cases} \\text{$t_e^0$ free flow time} \\\\ \\text{$c_e$ capacity}\\end{cases}\\]\nEveryone behaves selfishly: find a Nash equilibrium.\nContinuous optimization problem, requires solving many shortest paths.\n\n\nBoyles, Lownes, and Unnikrishnan (2025)"
+    "text": "Static traffic assignment (theory)\nWhat if conflicting agents cause a slowdown?\n\\[ t_e(f_e) = t_e^0 \\left[1 + \\alpha \\left(\\frac{f_e}{c_e}\\right)^\\beta \\right] \\enspace \\text{with} \\enspace \\begin{cases} \\text{$t_e$: travel time} \\\\ \\text{$f_e$: edge flow} \\\\ \\text{$c_e$: capacity}\\end{cases}\\]\nEveryone behaves selfishly: find a Nash equilibrium.\n\n\nBoyles, Lownes, and Unnikrishnan (2025)"
   },
   {
     "objectID": "index.html#static-traffic-assignment-example",
@@ -67,7 +67,7 @@
     "href": "index.html#multi-agent-pathfinding-theory",
     "title": "Mixing data, simulation and decision",
     "section": "Multi-agent pathfinding (theory)",
-    "text": "Multi-agent pathfinding (theory)\n\n\nWhat if conflicting agents are forbidden?\nEveryone behaves selflessly: find a social optimum.\nDiscrete optimization, requires solving many shortest paths.\n\n\n\n\n\nWang et al. (2025)"
+    "text": "Multi-agent pathfinding (theory)\n\n\nWhat if conflicting agents are forbidden?\nEveryone behaves selflessly: find a social optimum.\n\n\n\n\n\nWang et al. (2025)"
   },
   {
     "objectID": "index.html#multi-agent-pathfinding-example",
@@ -109,7 +109,7 @@
     "href": "index.html#deep-learning",
     "title": "Mixing data, simulation and decision",
     "section": "Deep learning",
-    "text": "Deep learning\n\n\nNeural networks are a flexible family of parametric functions.\nSubroutines called layers can be assembled arbitrarily.\nGradient descent works because individual layers are differentiable automatically.\n\n\n\n\nVaswani et al. (2017)\n\n\n\n\n\nScardapane (2024)"
+    "text": "Deep learning\n\n\nNeural networks are a flexible family of parametric functions.\nSubroutines called layers can be assembled arbitrarily.\nGradient descent works because individual layers are differentiable automatically.\n\n\n\n\n\nVaswani et al. (2017)\n\n\n\n\n\n\nScardapane (2024)"
   },
   {
     "objectID": "index.html#why-differentiability",

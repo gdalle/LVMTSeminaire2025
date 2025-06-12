@@ -259,9 +259,8 @@ Guillaume Dalle
 <section id="static-traffic-assignment-theory" class="slide level2">
 <h2>Static traffic assignment (theory)</h2>
 <p>What if conflicting agents cause a <em>slowdown</em>?</p>
-<p><span class="math display">\[ t_e(f_e) = t_e^0 \left[1 + \alpha \left(\frac{f_e}{c_e}\right)^\beta \right] \enspace \text{with} \enspace \begin{cases} \text{$t_e^0$ free flow time} \\ \text{$c_e$ capacity}\end{cases}\]</span></p>
-<p>Everyone behaves selfishly: find a Nash <em>equilibrium</em>.</p>
-<p><em>Continuous</em> optimization problem, requires solving many shortest paths.</p>
+<p><span class="math display">\[ t_e(f_e) = t_e^0 \left[1 + \alpha \left(\frac{f_e}{c_e}\right)^\beta \right] \enspace \text{with} \enspace \begin{cases} \text{$t_e$: travel time} \\ \text{$f_e$: edge flow} \\ \text{$c_e$: capacity}\end{cases}\]</span></p>
+<p>Everyone behaves selfishly: find a Nash equilibrium.</p>
 
 <aside><div>
 <p><span class="citation" data-cites="boylesTransportationNetworkAnalysis2025">Boyles, Lownes, and Unnikrishnan (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
@@ -312,8 +311,7 @@ Guillaume Dalle
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>What if conflicting agents are <em>forbidden</em>?</p>
-<p>Everyone behaves selflessly: find a social <em>optimum</em>.</p>
-<p><em>Discrete</em> optimization, requires solving many shortest paths.</p>
+<p>Everyone behaves selflessly: find a social optimum.</p>
 </div><div class="column" style="width:50%;">
 <div style="text-align:center;">
 <div class="quarto-figure quarto-figure-center">
@@ -446,11 +444,13 @@ Guillaume Dalle
 <p>Subroutines called <em>layers</em> can be assembled arbitrarily.</p>
 <p>Gradient descent works because individual layers are <em>differentiable</em> automatically.</p>
 </div><div class="column" style="width:50%;">
+<div style="text-align:center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/transformer.png"></p>
 <figcaption><span class="citation" data-cites="vaswaniAttentionAllYou2017">Vaswani et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></figcaption>
 </figure>
+</div>
 </div>
 </div></div>
 
