@@ -1,0 +1,392 @@
+---
+title: "Mixing data, simulation and decision"
+subtitle: "The role of automatic differentiation"
+author: "Guillaume Dalle"
+institute: "LVMT"
+date: "2025/06/13"
+format:
+    revealjs:
+        slide-number: true
+        html-math-method: mathjax
+bibliography: LVMT.bib
+toc: true
+toc-depth: 1
+---
+
+## A little about me
+
+::::: {.columns}
+
+:::: {.column width=50%}
+### 📜 CV
+- 2019-2022: PhD at CERMICS
+- 2022: visiting student at MIT
+- 2023-2024: postdoc at EPFL
+- 2025-????: researcher here!
+::::
+
+:::: {.column width=50%}
+### 💕 Passions
+- By day: applied mathematics, computer science
+- By night: board games, songwriting, musicals
+::::
+
+:::::
+
+# Motivation
+
+## Road traffic
+
+MATSim model of Paris (<https://matsim.org/gallery/paris/>)
+
+{{< video https://vimeo.com/319314052 width="100%" height="80%" >}}
+
+## Train routing
+
+Flatland railway simulator
+
+![@mohantyFlatlandRLMultiAgentReinforcement2020](img/flatland.gif)
+
+## Challenges
+
+:::: {.columns}
+
+::: {.column width=50%}
+### 📊 Calibration
+Fitting model parameters to explain observed data.
+:::
+
+::: {.column width=50%}
+### 🏃 Acceleration
+Replacing complicated models with simpler surrogates.
+:::
+
+::::
+
+### 🗺️ Decision-making
+Using these models to inform industrial or political choices.
+
+::: {.callout-warning}
+### We focus on simpler models
+
+They are easier to analyze and optimize.
+:::
+
+# Path problems with congestion
+
+## Basic shortest paths
+
+Most transportation problems live on a graph $G = (V, E)$:
+
+:::: {.columns}
+::: {.column width=40%}
+- $V$ is a set of vertices
+:::
+::: {.column width=60%}
+- $E$ is a set of (weighted) edges
+:::
+::::
+
+Shortest path = sequence of edges $a \to b$ with minimum cost.
+
+Very efficient algorithms available (Dijkstra, A*)... until we add multiple agents 😈
+
+## Static traffic assignment (theory)
+
+What if conflicting agents cause a *slowdown*?
+
+$$ t_e(f_e) = t_e^0 \left[1 + \alpha \left(\frac{f_e}{c_e}\right)^\beta \right] \enspace \text{with} \enspace \begin{cases} \text{$t_e^0$ free flow time} \\ \text{$c_e$ capacity}\end{cases}$$
+
+Everyone behaves selfishly: find a Nash *equilibrium*.
+
+*Continuous* optimization problem, requires solving many shortest paths.
+
+::: aside
+@boylesTransportationNetworkAnalysis2025
+:::
+
+## Static traffic assignment (example)
+
+![@xuUnifiedDatasetCityscale2024](img/unified_traffic_dataset.png)
+
+## Static traffic assignment (calibration)
+
+- Model parameters: free flow times, street capacities
+- Input data: network structure, travel demand
+- Observed data: measured flows or speeds
+
+Goal: estimate model parameters from the data.
+
+::: {.callout-tip}
+### Idea
+
+During calibration, the TA problem is a *subroutine*.
+:::
+
+## Static traffic assignment (calibration)
+
+:::: {.columns}
+
+::: {.column width=60%}
+
+![@xuUnifiedDatasetCityscale2024](img/dataset_creation.png)
+
+:::
+
+::: {.column width=40%}
+Can we do better than manual fine-tuning?
+
+Grid search does not scale.
+:::
+
+::::
+
+## Multi-agent pathfinding (theory)
+
+::::: {.columns}
+
+:::: {.column width=50%}
+
+What if conflicting agents are *forbidden*?
+
+Everyone behaves selflessly: find a social *optimum*.
+
+*Discrete* optimization, requires solving many shortest paths.
+
+::::
+
+:::: {.column width=50%}
+
+::: {style="text-align:center;"}
+![@wangWherePathsCollide2025](img/mapf_conflict.png)
+:::
+
+::::
+
+:::::
+
+
+## Multi-agent pathfinding (example)
+
+::: {layout-ncol=3}
+
+![@sternMultiAgentPathfindingDefinitions2019](img/maze-32-32-2.svg)
+
+![](img/Paris_1_256.svg)
+
+![](img/w_woundedcoast.svg)
+
+:::
+
+## Multi-agent pathfinding (acceleration)
+
+MAPF is difficult, choice between *optimality* and *speed*?
+
+$$
+\xrightarrow[]{\text{Input}}
+\boxed{\text{Encoder}}
+\xrightarrow[]{\text{Guidance}}
+\boxed{\text{Fast solver}}
+\xrightarrow[]{\text{Solution}}
+$$
+
+Goal: learn encoder parameters to guide the solver.
+
+:::: {.columns}
+
+::: {.column width=50%}
+- modified movement costs
+:::
+
+::: {.column width=50%}
+- custom priority ordering
+:::
+
+::::
+
+::: {.callout-tip}
+### Idea
+
+During encoder learning, the MAPF problem is a *subroutine*.
+:::
+
+## Both models (decision-making)
+
+:::: {.columns}
+
+::: {.column width=50%}
+### 🚥 Static traffic assignment
+
+Change the rules:
+
+- Set tolls
+- Close streets
+:::
+
+::: {.column width=50%}
+### 🗺️ Multi-agent pathfinding
+
+Change the rules:
+
+- Cancel trips
+- Adapt infrastructure
+:::
+
+::::
+
+::: {.callout-tip}
+### Idea
+
+When we evaluate policy changes, the original problem is a *subroutine*.
+:::
+
+# Machine learning primer
+
+## Supervised learning
+
+Imagine we have a dataset of image-label pairs $(x_i, y_i)$:
+
+$$  (🐱, \texttt{cat}) \quad (🐶, \texttt{dog}) \quad (🦆, \texttt{duck}) $$
+
+We want to recognize animals using a function
+
+$$ f_p : x \longmapsto y $$
+
+This function has parameters $p$ which need to be set.
+
+## Losses and gradients
+
+Parameters are set by minimizing a loss function
+
+$$ \ell(p) = \sum_i \lvert f_p(x_i) - y_i \rvert^2 $$
+
+:::: {.columns}
+
+::: {.column width=40%}
+![](img/descent.gif)
+:::
+
+::: {.column width=60%}
+
+The gradient $\nabla \ell(p)$ gives a direction where loss increases.
+
+Taking small steps with $p$ in the opposite direction = gradient descent.
+:::
+
+::::
+
+## Deep learning
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+Neural networks are a flexible family of parametric functions.
+
+Subroutines called *layers* can be assembled arbitrarily.
+
+Gradient descent works because individual layers are *differentiable* automatically.
+
+:::
+
+::: {.column width=50%}
+![@vaswaniAttentionAllYou2017](img/transformer.png)
+:::
+
+::::
+
+::: aside
+@scardapaneAlicesAdventuresDifferentiable2024
+:::
+
+## Why differentiability?
+
+::: {.callout-tip}
+### Crucial insight
+
+What if we could compute "derivatives of transportation problems" automatically?
+:::
+
+- **Calibration**: fit a large model with gradient descent
+- **Acceleration**: learn an encoder to improve fast solvers
+- **Decision-making**: solve bi-level optimization problems
+
+# Optimization as a layer
+
+## Parametric optimization problems
+
+A parametric optimization problem has the form
+
+$$ p \quad \longmapsto \quad \min_v c(v, p) \enspace \text{subject to} \enspace v \in \mathcal{C} $$ 
+
+$v$ is the decision variable, $c$ the cost, $v \in \mathcal{C}$ the constraints.
+
+| | TA | MAPF |
+|---|---|---|
+| Variable $v$ | Traffic flows | Agent paths |
+| Parameter $p$ | Street capacities | Movement costs |
+
+::: aside
+@mandiDecisionFocusedLearningFoundations2024
+:::
+
+## Theoretical issues
+
+:::: {.columns}
+
+::: {.column width=60%}
+| | TA | MAPF |
+|---|---|---|
+| Problem type | Continuous | Discrete |
+| Derivative $\frac{\partial v^*}{\partial p}$ | Well-defined | Ill-defined |
+:::
+
+::: {.column width=40%}
+![@berthetLearningDifferentiablePerturbed2020](img/perturbed.png)
+:::
+
+::::
+
+## Practical issues
+
+:::: {.columns}
+
+::: {.column width=50%}
+### 👩‍🔬 Expertise 
+Can we reuse existing algorithms and make them differentiable?
+:::
+
+::: {.column width=50%}
+### 💻 Hardware
+Can we leverage modern parallel processors (GPUs) to speed things up?
+:::
+
+::::
+
+### 📖 Open science
+
+Can we do it all with open-source software and reproducible experiments?
+
+# Conclusion
+
+## Recent works
+
+- Solving large-scale transportation problems for logistics: @bouvierSolvingContinentScaleInventory2023
+- Unifying techniques for differentiable optimization layers: @dalleLearningCombinatorialOptimization2022
+- Developing software for automatic differentiation of complex programs: @dalleCommonInterfaceAutomatic2025, @hill2025sparser, @montoisonRevisitingSparseMatrix2025
+
+## Research perspectives
+
+- Methodological: combinatorial optimization, graph machine learning, automatic differentiation, game theory
+- Practical: large-scale transportation & logistics problems
+- Industrial partners: Renault, Michelin, Califrais, ART, SNCF
+
+::: {.callout-note}
+### I want to know what you do!
+
+Send me a paper you like at [guillaume.dalle@enpc.fr](mailto:guillaume.dalle@enpc.fr)
+:::
+
+---
+
+## References

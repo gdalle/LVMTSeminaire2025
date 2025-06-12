@@ -1,0 +1,272 @@
+@inproceedings{berthetLearningDifferentiablePerturbed2020,
+  title = {Learning with {{Differentiable Perturbed Optimizers}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Berthet, Quentin and Blondel, Mathieu and Teboul, Olivier and Cuturi, Marco and Vert, Jean-Philippe and Bach, Francis},
+  year = {2020},
+  volume = {33},
+  pages = {9508--9519},
+  publisher = {Curran Associates, Inc.},
+  url = {https://proceedings.neurips.cc/paper/2020/hash/6bb56208f672af0dd65451f869fedfd9-Abstract.html},
+  abstract = {Machine learning pipelines often rely on optimizers procedures to make discrete decisions (e.g., sorting, picking closest neighbors, or shortest paths). Although these discrete decisions are easily computed in a forward manner, they break the back-propagation of computational graphs. In order to expand the scope of learning problems that can be solved in an end-to-end fashion, we propose a systematic method to transform optimizers into operations that are differentiable and never locally constant. Our approach relies on stochastically perturbed optimizers, and can be used readily within existing solvers. Their derivatives can be evaluated efficiently, and smoothness tuned via the chosen noise amplitude. We also show how this framework can be connected to a family of losses developed in structured prediction, and give theoretical guarantees for their use in learning tasks. We demonstrate experimentally the performance of our approach on various tasks.}
+}
+
+@misc{blondelElementsDifferentiableProgramming2024,
+  title = {The {{Elements}} of {{Differentiable Programming}}},
+  author = {Blondel, Mathieu and Roulet, Vincent},
+  year = {2024},
+  month = jul,
+  number = {arXiv:2403.14606},
+  eprint = {2403.14606},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2403.14606},
+  url = {http://arxiv.org/abs/2403.14606},
+  abstract = {Artificial intelligence has recently experienced remarkable advances, fueled by large models, vast datasets, accelerated hardware, and, last but not least, the transformative power of differentiable programming. This new programming paradigm enables end-to-end differentiation of complex computer programs (including those with control flows and data structures), making gradient-based optimization of program parameters possible. As an emerging paradigm, differentiable programming builds upon several areas of computer science and applied mathematics, including automatic differentiation, graphical models, optimization and statistics. This book presents a comprehensive review of the fundamental concepts useful for differentiable programming. We adopt two main perspectives, that of optimization and that of probability, with clear analogies between the two. Differentiable programming is not merely the differentiation of programs, but also the thoughtful design of programs intended for differentiation. By making programs differentiable, we inherently introduce probability distributions over their execution, providing a means to quantify the uncertainty associated with program outputs.},
+  archiveprefix = {arXiv}
+}
+
+@article{bouvierSolvingContinentScaleInventory2023,
+  title = {Solving a {{Continent-Scale Inventory Routing Problem}} at {{Renault}}},
+  author = {Bouvier, Louis and Dalle, Guillaume and Parmentier, Axel and Vidal, Thibaut},
+  year = {2023},
+  month = oct,
+  journal = {Transportation Science},
+  publisher = {INFORMS},
+  issn = {0041-1655},
+  doi = {10.1287/trsc.2022.0342},
+  url = {https://pubsonline.informs.org/doi/full/10.1287/trsc.2022.0342},
+  abbr = {Journal},
+  abstract = {This paper is the fruit of a partnership with Renault. Their reverse logistic requires solving a continent-scale multiattribute inventory routing problem (IRP). With an average of 30 commodities, 16 depots, and 600 customers spread across a continent, our instances are orders of magnitude larger than those in the literature. Existing algorithms do not scale, so we propose a large neighborhood search (LNS). To make it work, (1) we generalize existing split delivery vehicle routing problems and IRP neighborhoods to this context, (2) we turn a state-of-the-art matheuristic for medium-scale IRP into a large neighborhood, and (3) we introduce two novel perturbations: the reinsertion of a customer and that of a commodity into the IRP solution. We also derive a new lower bound based on a flow relaxation. In order to stimulate the research on large-scale IRP, we introduce a library of industrial instances. We benchmark our algorithms on these instances and make our code open source. Extensive numerical experiments highlight the relevance of each component of our LNS. Funding: This work was supported by Renault Group. Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2022.0342.}
+}
+
+@misc{boylesTransportationNetworkAnalysis2025,
+  title = {Transportation {{Network Analysis}}, {{Volume I}}: {{Static}} and {{Dynamic Traffic Assignment}}},
+  shorttitle = {Transportation {{Network Analysis}}, {{Volume I}}},
+  author = {Boyles, Stephen D. and Lownes, Nicholas E. and Unnikrishnan, Avinash},
+  year = {2025},
+  month = jan,
+  number = {arXiv:2502.05182},
+  eprint = {2502.05182},
+  primaryclass = {math},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2502.05182},
+  url = {http://arxiv.org/abs/2502.05182},
+  abstract = {This book covers static and dynamic traffic assignment models used in transportation planning and network analysis. Traffic assignment is the final step in the traditional planning process, and recent decades have seen many advances in formulating and solving such models. The book discusses classical solution methods alongside recent ones used in contemporary planning software. The primary audience for the book is graduate students new to transportation network analysis, and to this end there are appendices providing general mathematical background, and more specific background in formulating optimization problems. We have also included appendices discussing more general optimization applications outside of traffic assignment. We believe the book is also of interest to practitioners seeking to understand recent advances in network analysis, and to researchers wanting a unified reference for traffic assignment content. A second volume is currently under preparation, and will cover transit, freight, and logistics models in transportation networks. A free PDF version of the text will always be available online at https://sboyles.github.io/blubook.html. We will periodically post updated versions of the text at this link, along with slides and other instructor resources.},
+  archiveprefix = {arXiv}
+}
+
+@incollection{correaWardropEquilibria2011,
+  title = {Wardrop {{Equilibria}}},
+  author = {Correa, Jose and {Stier-Moses}, Nicolas},
+  year = {2011},
+  month = feb,
+  doi = {10.1002/9780470400531.eorms0962},
+  abstract = {Wardrop equilibria are commonly used as a solution concept of network games when modeling transportation and telecommunication networks with congestion. This concept assumes that players select a route that minimizes the time or cost incurred in its traversal. This behavioral assumption admits convenient mathematical descriptions, and efficient algorithms for the computation of equilibria are available. For this reason, planners have been making use of this concept for decades for evaluating projects, optimizing tolls, estimating demands, and a myriad applications arising from extensions of the basic model. In this article, we introduce the basic model, explain strategies for computation of equilibria, and discuss the extent of the inefficiency arising from the selfish behavior of the players. In addition, we provide some generalizations of the basic model.},
+  isbn = {978-0-470-40053-1}
+}
+
+@misc{dalleCommonInterfaceAutomatic2025,
+  title = {A {{Common Interface}} for {{Automatic Differentiation}}},
+  author = {Dalle, Guillaume and Hill, Adrian},
+  year = {2025},
+  month = may,
+  number = {arXiv:2505.05542},
+  eprint = {2505.05542},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2505.05542},
+  url = {http://arxiv.org/abs/2505.05542},
+  abbr = {Preprint},
+  abstract = {For scientific machine learning tasks with a lot of custom code, picking the right Automatic Differentiation (AD) system matters. Our Julia package DifferentiationInterface.jl provides a common frontend to a dozen AD backends, unlocking easy comparison and modular development. In particular, its built-in preparation mechanism leverages the strengths of each backend by amortizing one-time computations. This is key to enabling sophisticated features like sparsity handling without putting additional burdens on the user.},
+  archiveprefix = {arXiv},
+  code = {https://github.com/JuliaDiff/DifferentiationInterface.jl}
+}
+
+@misc{dalleLearningCombinatorialOptimization2022,
+  title = {Learning with {{Combinatorial Optimization Layers}}: A {{Probabilistic Approach}}},
+  shorttitle = {Learning with {{Combinatorial Optimization Layers}}},
+  author = {Dalle, Guillaume and Baty, L{\'e}o and Bouvier, Louis and Parmentier, Axel},
+  year = {2022},
+  month = dec,
+  number = {arXiv:2207.13513},
+  eprint = {2207.13513},
+  primaryclass = {cs, math, stat},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2207.13513},
+  url = {http://arxiv.org/abs/2207.13513},
+  abbr = {Preprint},
+  abstract = {Combinatorial optimization (CO) layers in machine learning (ML) pipelines are a powerful tool to tackle data-driven decision tasks, but they come with two main challenges. First, the solution of a CO problem often behaves as a piecewise constant function of its objective parameters. Given that ML pipelines are typically trained using stochastic gradient descent, the absence of slope information is very detrimental. Second, standard ML losses do not work well in combinatorial settings. A growing body of research addresses these challenges through diverse methods. Unfortunately, the lack of well-maintained implementations slows down the adoption of CO layers. In this paper, building upon previous works, we introduce a probabilistic perspective on CO layers, which lends itself naturally to approximate differentiation and the construction of structured losses. We recover many approaches from the literature as special cases, and we also derive new ones. Based on this unifying perspective, we present InferOpt.jl, an open-source Julia package that 1) allows turning any CO oracle with a linear objective into a differentiable layer, and 2) defines adequate losses to train pipelines containing such layers. Our library works with arbitrary optimization algorithms, and it is fully compatible with Julia's ML ecosystem. We demonstrate its abilities using a pathfinding problem on video game maps as guiding example, as well as three other applications from operations research.},
+  archiveprefix = {arXiv},
+  code = {https://github.com/JuliaDecisionFocusedLearning/InferOpt.jl}
+}
+
+@phdthesis{dalleMachineLearningCombinatorial2022,
+  title = {Machine Learning and Combinatorial Optimization Algorithms, with Applications to Railway Planning},
+  author = {Dalle, Guillaume},
+  year = {2022},
+  month = dec,
+  url = {https://pastel.hal.science/tel-04053322},
+  abbr = {Thesis},
+  abstract = {This thesis investigates the frontier between machine learning and combinatorial optimization, two active areas of applied mathematics research. We combine theoretical insights with efficient algorithms, and develop several open source Julia libraries. Inspired by a collaboration with the Soci{\'e}t{\'e} nationale des chemins de fer fran{\c c}ais (SNCF), we study high-impact use cases from the railway world: train failure prediction, delay propagation, and track allocation. In Part I, we provide mathematical background and describe software implementations for various tools that will be needed later on: implicit differentiation, temporal point processes, Hidden Markov Models and Multi-Agent Path Finding. Our publicly available code fills a void in the Julia package ecosystem, aiming at ease of use without compromising on performance. In Part II, we highlight theoretical contributions related to both statistics and decision-making. We consider a Vector AutoRegressive process with partial observations, and prove matching upper and lower bounds on the estimation error. We unify and extend the state of the art for combinatorial optimization layers in deep learning, gathering various approaches in a Julia library called InferOpt.jl. We also seek to differentiate through multi-objective optimization layers, which leads to a novel theory of lexicographic convex analysis. In Part III, these mathematical and algorithmic foundations come together to tackle railway problems. We design a hierarchical model of train failures, propose a graph-based framework for delay propagation, and suggest new avenues for track allocation, with the Flatland challenge as a testing ground.},
+  langid = {english},
+  pdf = {https://pastel.hal.science/tel-04053322},
+  school = {{\'E}cole des Ponts ParisTech},
+  annotation = {HAL\_ID: tel-04053322}
+}
+
+@book{goodfellowDeepLearning2016,
+  title = {Deep Learning},
+  author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+  year = {2016},
+  publisher = {The MIT Press},
+  address = {Cambridge, Massachusetts},
+  url = {https://www.deeplearningbook.org/},
+  abstract = {"Deep learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and video games. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models. Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors"--Publisher's description},
+  isbn = {978-0-262-33737-3},
+  langid = {english},
+  annotation = {OCLC: 1183962587}
+}
+
+@article{hill2025sparser,
+  title = {Sparser, Better, Faster, Stronger: {{Sparsity}} Detection for Efficient Automatic Differentiation},
+  author = {Hill, Adrian and Dalle, Guillaume},
+  year = {2025},
+  journal = {Transactions on Machine Learning Research},
+  issn = {2835-8856},
+  url = {https://openreview.net/forum?id=GtXSN52nIW}
+}
+
+@article{mandiDecisionFocusedLearningFoundations2024,
+  title = {Decision-{{Focused Learning}}: {{Foundations}}, {{State}} of the {{Art}}, {{Benchmark}} and {{Future Opportunities}}},
+  shorttitle = {Decision-{{Focused Learning}}},
+  author = {Mandi, Jayanta and Kotary, James and Berden, Senne and Mulamba, Maxime and Bucarey, Victor and Guns, Tias and Fioretto, Ferdinando},
+  year = {2024},
+  month = aug,
+  journal = {Journal of Artificial Intelligence Research},
+  volume = {80},
+  pages = {1623--1701},
+  issn = {1076-9757},
+  doi = {10.1613/jair.1.15320},
+  url = {https://www.jair.org/index.php/jair/article/view/15320},
+  abstract = {Decision-focused learning (DFL) is an emerging paradigm that integrates machine learning (ML) and constrained optimization to enhance decision quality by training ML models in an end-to-end system. This approach shows significant potential to revolutionize combinatorial decision-making in real-world applications that operate under uncertainty, where estimating unknown parameters within decision models is a major challenge. This paper presents a comprehensive review of DFL, providing an in-depth analysis of both gradient-based and gradient-free techniques used to combine ML and constrained optimization. It evaluates the strengths and limitations of these techniques and includes an extensive empirical evaluation of eleven methods across seven problems. The survey also offers insights into recent advancements and future research directions in DFL.},
+  copyright = {Copyright (c) 2024 Journal of Artificial Intelligence Research},
+  langid = {english}
+}
+
+@misc{mohantyFlatlandRLMultiAgentReinforcement2020,
+  title = {Flatland-{{RL}} : {{Multi-Agent Reinforcement Learning}} on {{Trains}}},
+  shorttitle = {Flatland-{{RL}}},
+  author = {Mohanty, Sharada and Nygren, Erik and Laurent, Florian and Schneider, Manuel and Scheller, Christian and Bhattacharya, Nilabha and Watson, Jeremy and Egli, Adrian and Eichenberger, Christian and Baumberger, Christian and Vienken, Gereon and Sturm, Irene and Sartoretti, Guillaume and Spigler, Giacomo},
+  year = {2020},
+  month = dec,
+  eprint = {2012.05893},
+  url = {http://arxiv.org/abs/2012.05893},
+  abstract = {Efficient automated scheduling of trains remains a major challenge for modern railway systems. The underlying vehicle rescheduling problem (VRSP) has been a major focus of Operations Research (OR) since decades. Traditional approaches use complex simulators to study VRSP, where experimenting with a broad range of novel ideas is time consuming and has a huge computational overhead. In this paper, we introduce a two-dimensional simplified grid environment called "Flatland" that allows for faster experimentation. Flatland does not only reduce the complexity of the full physical simulation, but also provides an easy-to-use interface to test novel approaches for the VRSP, such as Reinforcement Learning (RL) and Imitation Learning (IL). In order to probe the potential of Machine Learning (ML) research on Flatland, we (1) ran a first series of RL and IL experiments and (2) design and executed a public Benchmark at NeurIPS 2020 to engage a large community of researchers to work on this problem. Our own experimental results, on the one hand, demonstrate that ML has potential in solving the VRSP on Flatland. On the other hand, we identify key topics that need further research. Overall, the Flatland environment has proven to be a robust and valuable framework to investigate the VRSP for railway networks. Our experiments provide a good starting point for further research and for the participants of the NeurIPS 2020 Flatland Benchmark. All of these efforts together have the potential to have a substantial impact on shaping the mobility of the future.},
+  archiveprefix = {arXiv}
+}
+
+@misc{montoisonRevisitingSparseMatrix2025,
+  title = {Revisiting {{Sparse Matrix Coloring}} and {{Bicoloring}}},
+  author = {Montoison, Alexis and Dalle, Guillaume and Gebremedhin, Assefaw},
+  year = {2025},
+  month = may,
+  number = {arXiv:2505.07308},
+  eprint = {2505.07308},
+  primaryclass = {math},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2505.07308},
+  url = {http://arxiv.org/abs/2505.07308},
+  abstract = {Sparse matrix coloring and bicoloring are fundamental building blocks of sparse automatic differentiation. Bicoloring is particularly advantageous for rectangular Jacobian matrices with at least one dense row and column. Indeed, in such cases, unidirectional row or column coloring demands a number of colors equal to the number of rows or columns. We introduce a new strategy for bicoloring that encompasses both direct and substitution-based decompression approaches. Our method reformulates the two variants of bicoloring as star and acyclic colorings of an augmented symmetric matrix. We extend the concept of neutral colors, previously exclusive to bicoloring, to symmetric colorings, and we propose a post-processing routine that neutralizes colors to further reduce the overall color count. We also present the Julia package SparseMatrixColorings, which includes these new bicoloring algorithms alongside all standard coloring methods for sparse derivative matrix computation. Compared to ColPack, the Julia package also offers enhanced implementations for star and acyclic coloring, vertex ordering, as well as decompression.},
+  archiveprefix = {arXiv}
+}
+
+@misc{scardapaneAlicesAdventuresDifferentiable2024,
+  title = {Alice's {{Adventures}} in a {{Differentiable Wonderland}} -- {{Volume I}}, {{A Tour}} of the {{Land}}},
+  author = {Scardapane, Simone},
+  year = {2024},
+  month = jul,
+  number = {arXiv:2404.17625},
+  eprint = {2404.17625},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2404.17625},
+  url = {http://arxiv.org/abs/2404.17625},
+  abstract = {Neural networks surround us, in the form of large language models, speech transcription systems, molecular discovery algorithms, robotics, and much more. Stripped of anything else, neural networks are compositions of differentiable primitives, and studying them means learning how to program and how to interact with these models, a particular example of what is called differentiable programming. This primer is an introduction to this fascinating field imagined for someone, like Alice, who has just ventured into this strange differentiable wonderland. I overview the basics of optimizing a function via automatic differentiation, and a selection of the most common designs for handling sequences, graphs, texts, and audios. The focus is on a intuitive, self-contained introduction to the most important design techniques, including convolutional, attentional, and recurrent blocks, hoping to bridge the gap between theory and code (PyTorch and JAX) and leaving the reader capable of understanding some of the most advanced models out there, such as large language models (LLMs) and multimodal architectures.},
+  archiveprefix = {arXiv}
+}
+
+@misc{shenTrackingProgressMultiAgent2023,
+  title = {Tracking {{Progress}} in {{Multi-Agent Path Finding}}},
+  author = {Shen, Bojie and Chen, Zhe and Cheema, Muhammad Aamir and Harabor, Daniel D. and Stuckey, Peter J.},
+  year = {2023},
+  month = may,
+  number = {arXiv:2305.08446},
+  eprint = {2305.08446},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2305.08446},
+  url = {http://arxiv.org/abs/2305.08446},
+  abstract = {Multi-Agent Path Finding (MAPF) is an important core problem for many new and emerging industrial applications. Many works appear on this topic each year, and a large number of substantial advancements and performance improvements have been reported. Yet measuring overall progress in MAPF is difficult: there are many potential competitors, and the computational burden for comprehensive experimentation is prohibitively large. Moreover, detailed data from past experimentation is usually unavailable. In this work, we introduce a set of methodological and visualisation tools which can help the community establish clear indicators for state-of-the-art MAPF performance and which can facilitate large-scale comparisons between MAPF solvers. Our objectives are to lower the barrier of entry for new researchers and to further promote the study of MAPF, since progress in the area and the main challenges are made much clearer.},
+  archiveprefix = {arXiv}
+}
+
+@article{sternMultiAgentPathfindingDefinitions2019,
+  title = {Multi-{{Agent Pathfinding}}: {{Definitions}}, {{Variants}}, and {{Benchmarks}}},
+  shorttitle = {Multi-{{Agent Pathfinding}}},
+  author = {Stern, Roni and Sturtevant, Nathan and Felner, Ariel and Koenig, Sven and Ma, Hang and Walker, Thayne and Li, Jiaoyang and Atzmon, Dor and Cohen, Liron and Kumar, T. K. and Bart{\'a}k, Roman and Boyarski, Eli},
+  year = {2019},
+  journal = {Proceedings of the International Symposium on Combinatorial Search},
+  volume = {10},
+  number = {1},
+  pages = {151--158},
+  issn = {2832-9163},
+  doi = {10.1609/socs.v10i1.18510},
+  url = {https://ojs.aaai.org/index.php/SOCS/article/view/18510},
+  abstract = {The multi-agent pathfinding problem (MAPF) is the fundamental problem of planning paths for multiple agents, where the key constraint is that the agents will be able to follow these paths concurrently without colliding with each other. Applications of MAPF include automated warehouses, autonomous vehicles, and robotics. Research on MAPF has been flourishing in the past couple of years. Different MAPF research papers assume different sets of assumptions, e.g., whether agents can traverse the same road at the same time, and have different objective functions, e.g., minimize makespan or sum of agents' actions costs. These assumptions and objectives are sometimes implicitly assumed or described informally. This makes it difficult for establishing appropriate baselines for comparison in research papers, as well as making it difficult for practitioners to find the papers relevant to their concrete application. This paper aims to fill this gap and facilitate future research and practitioners by providing a unifying terminology for describing the common MAPF assumptions and objectives. In addition, we also provide pointers to two MAPF benchmarks. In particular, we introduce a new grid-based benchmark for MAPF, and demonstrate experimentally that it poses a challenge to contemporary MAPF algorithms.},
+  copyright = {Copyright (c) 2021 Proceedings of the International Symposium on Combinatorial Search},
+  langid = {english}
+}
+
+@inproceedings{vaswaniAttentionAllYou2017,
+  title = {Attention Is {{All}} You {{Need}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  year = {2017},
+  volume = {30},
+  publisher = {Curran Associates, Inc.},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html},
+  abstract = {The dominant sequence transduction models are based on complex recurrent orconvolutional neural networks in an encoder and decoder configuration. The best performing such models also connect the encoder and decoder through an attentionm echanisms.  We propose a novel, simple network architecture based solely onan attention mechanism, dispensing with recurrence and convolutions entirely.Experiments on two machine translation tasks show these models to be superiorin quality while being more parallelizable and requiring significantly less timeto train. Our single model with 165 million parameters, achieves 27.5 BLEU onEnglish-to-German translation, improving over the existing best ensemble result by over 1 BLEU. On English-to-French translation, we outperform the previoussingle state-of-the-art with model by 0.7 BLEU, achieving a BLEU score of 41.1.}
+}
+
+@misc{wangWherePathsCollide2025,
+  title = {Where {{Paths Collide}}: {{A Comprehensive Survey}} of {{Classic}} and {{Learning-Based Multi-Agent Pathfinding}}},
+  shorttitle = {Where {{Paths Collide}}},
+  author = {Wang, Shiyue and Xu, Haozheng and Zhang, Yuhan and Lin, Jingran and Lu, Changhong and Wang, Xiangfeng and Li, Wenhao},
+  year = {2025},
+  month = may,
+  number = {arXiv:2505.19219},
+  eprint = {2505.19219},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2505.19219},
+  url = {http://arxiv.org/abs/2505.19219},
+  abstract = {Multi-Agent Path Finding (MAPF) is a fundamental problem in artificial intelligence and robotics, requiring the computation of collision-free paths for multiple agents navigating from their start locations to designated goals. As autonomous systems become increasingly prevalent in warehouses, urban transportation, and other complex environments, MAPF has evolved from a theoretical challenge to a critical enabler of real-world multi-robot coordination. This comprehensive survey bridges the long-standing divide between classical algorithmic approaches and emerging learning-based methods in MAPF research. We present a unified framework that encompasses search-based methods (including Conflict-Based Search, Priority-Based Search, and Large Neighborhood Search), compilation-based approaches (SAT, SMT, CSP, ASP, and MIP formulations), and data-driven techniques (reinforcement learning, supervised learning, and hybrid strategies). Through systematic analysis of experimental practices across 200+ papers, we uncover significant disparities in evaluation methodologies, with classical methods typically tested on larger-scale instances (up to 200 by 200 grids with 1000+ agents) compared to learning-based approaches (predominantly 10-100 agents). We provide a comprehensive taxonomy of evaluation metrics, environment types, and baseline selections, highlighting the need for standardized benchmarking protocols. Finally, we outline promising future directions including mixed-motive MAPF with game-theoretic considerations, language-grounded planning with large language models, and neural solver architectures that combine the rigor of classical methods with the flexibility of deep learning. This survey serves as both a comprehensive reference for researchers and a practical guide for deploying MAPF solutions in increasingly complex real-world applications.},
+  archiveprefix = {arXiv}
+}
+
+@article{xuUnifiedDatasetCityscale2024,
+  title = {A Unified Dataset for the City-Scale Traffic Assignment Model in 20 {{U}}.{{S}}. Cities},
+  author = {Xu, Xiaotong and Zheng, Zhenjie and Hu, Zijian and Feng, Kairui and Ma, Wei},
+  year = {2024},
+  month = mar,
+  journal = {Scientific Data},
+  volume = {11},
+  number = {1},
+  pages = {325},
+  issn = {2052-4463},
+  doi = {10.1038/s41597-024-03149-8},
+  url = {https://www.nature.com/articles/s41597-024-03149-8},
+  abstract = {City-scale traffic data, such as traffic flow, speed, and density on every road segment, are the foundation of modern urban research. However, accessing such data on a city scale is challenging due to the limited number of sensors and privacy concerns. Consequently, most of the existing traffic datasets are typically limited to small, specific urban areas with incomplete data types, hindering the research in urban studies, such as transportation, environment, and energy fields. It still lacks a city-scale traffic dataset with comprehensive data types and satisfactory quality that can be publicly available across cities. To address this issue, we propose a unified approach for producing city-scale traffic data using the classic traffic assignment model in transportation studies. Specifically, the inputs of our approach are sourced from open public databases, including road networks, traffic demand, and travel time. Then the approach outputs comprehensive and validated citywide traffic data on the entire road network. In this study, we apply the proposed approach to 20 cities in the United States, achieving an average correlation coefficient of 0.79 in average travel time and an average relative error of 5.16\% and 10.47\% in average travel speed when compared with the real-world data.},
+  copyright = {2024 The Author(s)},
+  langid = {english}
+}
