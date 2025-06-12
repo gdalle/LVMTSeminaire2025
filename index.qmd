@@ -95,11 +95,9 @@ Very efficient algorithms available (Dijkstra, A*)... until we add multiple agen
 
 What if conflicting agents cause a *slowdown*?
 
-$$ t_e(f_e) = t_e^0 \left[1 + \alpha \left(\frac{f_e}{c_e}\right)^\beta \right] \enspace \text{with} \enspace \begin{cases} \text{$t_e^0$ free flow time} \\ \text{$c_e$ capacity}\end{cases}$$
+$$ t_e(f_e) = t_e^0 \left[1 + \alpha \left(\frac{f_e}{c_e}\right)^\beta \right] \enspace \text{with} \enspace \begin{cases} \text{$t_e$: travel time} \\ \text{$f_e$: edge flow} \\ \text{$c_e$: capacity}\end{cases}$$
 
-Everyone behaves selfishly: find a Nash *equilibrium*.
-
-*Continuous* optimization problem, requires solving many shortest paths.
+Everyone behaves selfishly: find a Nash equilibrium.
 
 ::: aside
 @boylesTransportationNetworkAnalysis2025
@@ -149,9 +147,7 @@ Grid search does not scale.
 
 What if conflicting agents are *forbidden*?
 
-Everyone behaves selflessly: find a social *optimum*.
-
-*Discrete* optimization, requires solving many shortest paths.
+Everyone behaves selflessly: find a social optimum.
 
 ::::
 
@@ -277,7 +273,7 @@ Taking small steps with $p$ in the opposite direction = gradient descent.
 
 ## Deep learning
 
-:::: {.columns}
+::::: {.columns}
 
 ::: {.column width=50%}
 
@@ -289,11 +285,13 @@ Gradient descent works because individual layers are *differentiable* automatica
 
 :::
 
-::: {.column width=50%}
+:::: {.column width=50%}
+::: {style="text-align:center;"}
 ![@vaswaniAttentionAllYou2017](img/transformer.png)
 :::
-
 ::::
+
+:::::
 
 ::: aside
 @scardapaneAlicesAdventuresDifferentiable2024
