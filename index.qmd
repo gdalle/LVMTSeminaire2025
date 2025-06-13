@@ -34,6 +34,11 @@ toc-depth: 1
 
 :::::
 
+
+::: footer
+Slides available at [gdalle.github.io/LVMTSeminaire2025](https://gdalle.github.io/LVMTSeminaire2025/)
+:::
+
 # Motivation
 
 ## Road traffic
