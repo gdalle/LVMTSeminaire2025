@@ -2,161 +2,168 @@
   {
     "objectID": "index.html#a-little-about-me",
     "href": "index.html#a-little-about-me",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "A little about me",
     "text": "A little about me\n\n\n📜 CV\n\n2019-2022: PhD at CERMICS\n2022: visiting student at MIT\n2023-2024: postdoc at EPFL\n2025-????: researcher here!\n\n\n💕 Passions\n\nBy day: applied mathematics, computer science\nBy night: board games, songwriting, musicals"
   },
   {
     "objectID": "index.html#road-traffic",
     "href": "index.html#road-traffic",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Road traffic",
     "text": "Road traffic\nMATSim model of Paris (https://matsim.org/gallery/paris/)"
   },
   {
     "objectID": "index.html#train-routing",
     "href": "index.html#train-routing",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Train routing",
     "text": "Train routing\nFlatland railway simulator\n\nMohanty et al. (2020)"
   },
   {
     "objectID": "index.html#challenges",
     "href": "index.html#challenges",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Challenges",
     "text": "Challenges\n\n\n📊 Calibration\nFitting model parameters to explain observed data.\n\n🏃 Acceleration\nReplacing complicated models with simpler surrogates.\n\n🗺️ Decision-making\nUsing these models to inform industrial or political choices.\n\n\n\n\n\n\nWe focus on simpler models\n\n\nThey are easier to analyze and optimize."
   },
   {
-    "objectID": "index.html#basic-shortest-paths",
-    "href": "index.html#basic-shortest-paths",
-    "title": "Mixing data, simulation and decision",
-    "section": "Basic shortest paths",
-    "text": "Basic shortest paths\nMost transportation problems live on a graph \\(G = (V, E)\\):\n\n\n\n\\(V\\) is a set of vertices\n\n\n\n\\(E\\) is a set of (weighted) edges\n\n\nShortest path = sequence of edges \\(a \\to b\\) with minimum cost.\nVery efficient algorithms available (Dijkstra, A*)… until we add multiple agents 😈"
+    "objectID": "index.html#shortest-paths",
+    "href": "index.html#shortest-paths",
+    "title": "Mixing data, optimization and decision",
+    "section": "Shortest paths",
+    "text": "Shortest paths\nMost transportation problems live on a graph \\(G = (V, E)\\):\n\n\n\n\\(V\\) is a set of vertices\n\n\n\n\\(E\\) is a set of (weighted) edges\n\n\nShortest path = sequence of edges \\(a \\to b\\) with minimum cost.\n\n\n\nSingle agent\nInteracting agents\n\n\n\n\nEasy\nHard"
   },
   {
     "objectID": "index.html#static-traffic-assignment-theory",
     "href": "index.html#static-traffic-assignment-theory",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Static traffic assignment (theory)",
     "text": "Static traffic assignment (theory)\nWhat if conflicting agents cause a slowdown?\n\\[ t_e(f_e) = t_e^0 \\left[1 + \\alpha \\left(\\frac{f_e}{c_e}\\right)^\\beta \\right] \\enspace \\text{with} \\enspace \\begin{cases} \\text{$t_e$: travel time} \\\\ \\text{$f_e$: edge flow} \\\\ \\text{$c_e$: capacity}\\end{cases}\\]\nEveryone behaves selfishly: find a Nash equilibrium.\n\n\nBoyles, Lownes, and Unnikrishnan (2025)"
   },
   {
     "objectID": "index.html#static-traffic-assignment-example",
     "href": "index.html#static-traffic-assignment-example",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Static traffic assignment (example)",
     "text": "Static traffic assignment (example)\n\nXu et al. (2024)"
   },
   {
     "objectID": "index.html#static-traffic-assignment-calibration",
     "href": "index.html#static-traffic-assignment-calibration",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Static traffic assignment (calibration)",
     "text": "Static traffic assignment (calibration)\n\nModel parameters: free flow times, street capacities\nInput data: network structure, travel demand\nObserved data: measured flows or speeds\n\nGoal: estimate model parameters from the data.\n\n\n\n\n\n\nIdea\n\n\nDuring calibration, the TA problem is a subroutine."
   },
   {
     "objectID": "index.html#static-traffic-assignment-calibration-1",
     "href": "index.html#static-traffic-assignment-calibration-1",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Static traffic assignment (calibration)",
     "text": "Static traffic assignment (calibration)\n\n\n\n\n\nXu et al. (2024)\n\n\n\nCan we do better than manual fine-tuning?\nGrid search does not scale."
   },
   {
     "objectID": "index.html#multi-agent-pathfinding-theory",
     "href": "index.html#multi-agent-pathfinding-theory",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Multi-agent pathfinding (theory)",
     "text": "Multi-agent pathfinding (theory)\n\n\nWhat if conflicting agents are forbidden?\nEveryone behaves selflessly: find a social optimum.\n\n\n\n\n\nWang et al. (2025)"
   },
   {
     "objectID": "index.html#multi-agent-pathfinding-example",
     "href": "index.html#multi-agent-pathfinding-example",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Multi-agent pathfinding (example)",
     "text": "Multi-agent pathfinding (example)\n\n\n\n\n\n\nStern et al. (2019)"
   },
   {
     "objectID": "index.html#multi-agent-pathfinding-acceleration",
     "href": "index.html#multi-agent-pathfinding-acceleration",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Multi-agent pathfinding (acceleration)",
     "text": "Multi-agent pathfinding (acceleration)\nMAPF is difficult, choice between optimality and speed?\n\\[\n\\xrightarrow[]{\\text{Input}}\n\\boxed{\\text{Encoder}}\n\\xrightarrow[]{\\text{Guidance}}\n\\boxed{\\text{Fast solver}}\n\\xrightarrow[]{\\text{Solution}}\n\\]\nGoal: learn encoder parameters to guide the solver.\n\n\n\nmodified movement costs\n\n\n\ncustom priority ordering\n\n\n\n\n\n\n\n\nIdea\n\n\nDuring encoder learning, the MAPF problem is a subroutine."
   },
   {
     "objectID": "index.html#both-models-decision-making",
     "href": "index.html#both-models-decision-making",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Both models (decision-making)",
     "text": "Both models (decision-making)\n\n\n🚥 Static traffic assignment\nChange the rules:\n\nSet tolls\nClose streets\n\n\n🗺️ Multi-agent pathfinding\nChange the rules:\n\nCancel trips\nAdapt infrastructure\n\n\n\n\n\n\n\n\nIdea\n\n\nWhen we evaluate policy changes, the original problem is a subroutine."
   },
   {
     "objectID": "index.html#supervised-learning",
     "href": "index.html#supervised-learning",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Supervised learning",
     "text": "Supervised learning\nImagine we have a dataset of image-label pairs \\((x_i, y_i)\\):\n\\[  (🐱, \\texttt{cat}) \\quad (🐶, \\texttt{dog}) \\quad (🦆, \\texttt{duck}) \\]\nWe want to recognize animals using a function\n\\[ f_p : x \\longmapsto y \\]\nThis function has parameters \\(p\\) which need to be set."
   },
   {
     "objectID": "index.html#losses-and-gradients",
     "href": "index.html#losses-and-gradients",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Losses and gradients",
     "text": "Losses and gradients\nParameters are set by minimizing a loss function\n\\[ \\ell(p) = \\sum_i \\lvert f_p(x_i) - y_i \\rvert^2 \\]\n\n\n\n\nThe gradient \\(\\nabla \\ell(p)\\) gives a direction where loss increases.\nTaking small steps with \\(p\\) in the opposite direction = gradient descent."
   },
   {
     "objectID": "index.html#deep-learning",
     "href": "index.html#deep-learning",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Deep learning",
     "text": "Deep learning\n\n\nNeural networks are a flexible family of parametric functions.\nSubroutines called layers can be assembled arbitrarily.\nGradient descent works because individual layers are differentiable automatically.\n\n\n\n\n\nVaswani et al. (2017)\n\n\n\n\n\n\nScardapane (2024)"
   },
   {
-    "objectID": "index.html#why-differentiability",
-    "href": "index.html#why-differentiability",
-    "title": "Mixing data, simulation and decision",
-    "section": "Why differentiability?",
-    "text": "Why differentiability?\n\n\n\n\n\n\nCrucial insight\n\n\nWhat if we could compute “derivatives of transportation problems” automatically?\n\n\n\n\nCalibration: fit a large model with gradient descent\nAcceleration: learn an encoder to improve fast solvers\nDecision-making: solve bi-level optimization problems"
+    "objectID": "index.html#the-meaning-of-differentiation",
+    "href": "index.html#the-meaning-of-differentiation",
+    "title": "Mixing data, optimization and decision",
+    "section": "The meaning of differentiation",
+    "text": "The meaning of differentiation\nDerivatives allow fast sensitivity analysis:\n\n➡️ for a given input, how much does it affect every output?\n⬅️ for a given output, how much is it affected by every input?\n\nNo need to evaluate small changes in every possible direction"
+  },
+  {
+    "objectID": "index.html#the-gist",
+    "href": "index.html#the-gist",
+    "title": "Mixing data, optimization and decision",
+    "section": "The gist",
+    "text": "The gist\n\n\n\n\n\n\nA strange concept\n\n\nWhat if we could compute derivatives of transportation problems automatically?\n\n\n\n\nCalibration: fit a large model with gradient descent\nAcceleration: learn an encoder to improve fast solvers\nDecision-making: solve bi-level optimization problems\n\n\nMachine learning 🤝 constraint satisfaction"
   },
   {
     "objectID": "index.html#parametric-optimization-problems",
     "href": "index.html#parametric-optimization-problems",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Parametric optimization problems",
     "text": "Parametric optimization problems\nA parametric optimization problem has the form\n\\[ p \\quad \\longmapsto \\quad \\min_v c(v, p) \\enspace \\text{subject to} \\enspace v \\in \\mathcal{C} \\]\n\\(v\\) is the decision variable, \\(c\\) the cost, \\(v \\in \\mathcal{C}\\) the constraints.\n\n\n\n\nTA\nMAPF\n\n\n\n\nVariable \\(v\\)\nTraffic flows\nAgent paths\n\n\nParameter \\(p\\)\nStreet capacities\nMovement costs\n\n\n\n\n\nMandi et al. (2024)"
   },
   {
     "objectID": "index.html#theoretical-issues",
     "href": "index.html#theoretical-issues",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Theoretical issues",
     "text": "Theoretical issues\n\n\n\n\n\n\n\n\n\n\n\nTA\nMAPF\n\n\n\n\nProblem type\nContinuous\nDiscrete\n\n\nDerivative \\(\\frac{\\partial v^*}{\\partial p}\\)\nWell-defined\nIll-defined\n\n\n\n\n\n\n\nBerthet et al. (2020)"
   },
   {
     "objectID": "index.html#practical-issues",
     "href": "index.html#practical-issues",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Practical issues",
     "text": "Practical issues\n\n\n👩‍🔬 Expertise\nCan we reuse existing algorithms and make them differentiable?\n\n💻 Hardware\nCan we leverage modern parallel processors (GPUs) to speed things up?\n\n📖 Open science\nCan we do it all with open-source software and reproducible experiments?"
   },
   {
     "objectID": "index.html#recent-works",
     "href": "index.html#recent-works",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Recent works",
     "text": "Recent works\n\nSolving large-scale transportation problems for logistics: Bouvier et al. (2023)\nUnifying techniques for differentiable optimization layers: Dalle et al. (2022)\nDeveloping software for automatic differentiation of complex programs: Dalle and Hill (2025), Hill and Dalle (2025), Montoison, Dalle, and Gebremedhin (2025)"
   },
   {
     "objectID": "index.html#research-perspectives",
     "href": "index.html#research-perspectives",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "Research perspectives",
     "text": "Research perspectives\n\nMethodological: combinatorial optimization, graph machine learning, automatic differentiation, game theory\nPractical: large-scale transportation & logistics problems\nIndustrial partners: Renault, Michelin, Califrais, ART, SNCF\n\n\n\n\n\n\n\nI want to know what you do!\n\n\nSend me a paper you like at guillaume.dalle@enpc.fr"
   },
   {
     "objectID": "index.html#references",
     "href": "index.html#references",
-    "title": "Mixing data, simulation and decision",
+    "title": "Mixing data, optimization and decision",
     "section": "References",
     "text": "References\n\n\n\n\nBerthet, Quentin, Mathieu Blondel, Olivier Teboul, Marco Cuturi, Jean-Philippe Vert, and Francis Bach. 2020. “Learning with Differentiable Perturbed Optimizers.” In Advances in Neural Information Processing Systems, 33:9508–19. Curran Associates, Inc. https://proceedings.neurips.cc/paper/2020/hash/6bb56208f672af0dd65451f869fedfd9-Abstract.html.\n\n\nBouvier, Louis, Guillaume Dalle, Axel Parmentier, and Thibaut Vidal. 2023. “Solving a Continent-Scale Inventory Routing Problem at Renault.” Transportation Science, October. https://doi.org/10.1287/trsc.2022.0342.\n\n\nBoyles, Stephen D., Nicholas E. Lownes, and Avinash Unnikrishnan. 2025. “Transportation Network Analysis, Volume I: Static and Dynamic Traffic Assignment.” arXiv. https://doi.org/10.48550/arXiv.2502.05182.\n\n\nDalle, Guillaume, Léo Baty, Louis Bouvier, and Axel Parmentier. 2022. “Learning with Combinatorial Optimization Layers: A Probabilistic Approach.” arXiv. https://doi.org/10.48550/arXiv.2207.13513.\n\n\nDalle, Guillaume, and Adrian Hill. 2025. “A Common Interface for Automatic Differentiation.” arXiv. https://doi.org/10.48550/arXiv.2505.05542.\n\n\nHill, Adrian, and Guillaume Dalle. 2025. “Sparser, Better, Faster, Stronger: Sparsity Detection for Efficient Automatic Differentiation.” Transactions on Machine Learning Research. https://openreview.net/forum?id=GtXSN52nIW.\n\n\nMandi, Jayanta, James Kotary, Senne Berden, Maxime Mulamba, Victor Bucarey, Tias Guns, and Ferdinando Fioretto. 2024. “Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities.” Journal of Artificial Intelligence Research 80 (August): 1623–1701. https://doi.org/10.1613/jair.1.15320.\n\n\nMohanty, Sharada, Erik Nygren, Florian Laurent, Manuel Schneider, Christian Scheller, Nilabha Bhattacharya, Jeremy Watson, et al. 2020. “Flatland-RL : Multi-Agent Reinforcement Learning on Trains.” http://arxiv.org/abs/2012.05893.\n\n\nMontoison, Alexis, Guillaume Dalle, and Assefaw Gebremedhin. 2025. “Revisiting Sparse Matrix Coloring and Bicoloring.” arXiv. https://doi.org/10.48550/arXiv.2505.07308.\n\n\nScardapane, Simone. 2024. “Alice’s Adventures in a Differentiable Wonderland – Volume I, A Tour of the Land.” arXiv. https://doi.org/10.48550/arXiv.2404.17625.\n\n\nStern, Roni, Nathan Sturtevant, Ariel Felner, Sven Koenig, Hang Ma, Thayne Walker, Jiaoyang Li, et al. 2019. “Multi-Agent Pathfinding: Definitions, Variants, and Benchmarks.” Proceedings of the International Symposium on Combinatorial Search 10 (1): 151–58. https://doi.org/10.1609/socs.v10i1.18510.\n\n\nVaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. “Attention Is All You Need.” In Advances in Neural Information Processing Systems. Vol. 30. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html.\n\n\nWang, Shiyue, Haozheng Xu, Yuhan Zhang, Jingran Lin, Changhong Lu, Xiangfeng Wang, and Wenhao Li. 2025. “Where Paths Collide: A Comprehensive Survey of Classic and Learning-Based Multi-Agent Pathfinding.” arXiv. https://doi.org/10.48550/arXiv.2505.19219.\n\n\nXu, Xiaotong, Zhenjie Zheng, Zijian Hu, Kairui Feng, and Wei Ma. 2024. “A Unified Dataset for the City-Scale Traffic Assignment Model in 20 U.S. Cities.” Scientific Data 11 (1): 325. https://doi.org/10.1038/s41597-024-03149-8."
   }

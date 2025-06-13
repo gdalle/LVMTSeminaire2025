@@ -11,7 +11,7 @@
 
   <meta name="author" content="Guillaume Dalle">
   <meta name="dcterms.date" content="2025-06-13">
-  <title>Mixing data, simulation and decision</title>
+  <title>Mixing data, optimization and decision</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -149,7 +149,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Mixing data, simulation and decision</h1>
+  <h1 class="title">Mixing data, optimization and decision</h1>
   <p class="subtitle">The role of automatic differentiation</p>
 
 <div class="quarto-title-authors">
@@ -241,8 +241,8 @@ Guillaume Dalle
 <h1>Path problems with congestion</h1>
 
 </section>
-<section id="basic-shortest-paths" class="slide level2">
-<h2>Basic shortest paths</h2>
+<section id="shortest-paths" class="slide level2">
+<h2>Shortest paths</h2>
 <p>Most transportation problems live on a graph <span class="math inline">\(G = (V, E)\)</span>:</p>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -255,7 +255,20 @@ Guillaume Dalle
 </ul>
 </div></div>
 <p>Shortest path = sequence of edges <span class="math inline">\(a \to b\)</span> with minimum cost.</p>
-<p>Very efficient algorithms available (Dijkstra, A*)… until we add multiple agents 😈</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Single agent</th>
+<th>Interacting agents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Easy</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="static-traffic-assignment-theory" class="slide level2">
 <h2>Static traffic assignment (theory)</h2>
@@ -458,18 +471,32 @@ Guillaume Dalle
 <aside><div>
 <p><span class="citation" data-cites="scardapaneAlicesAdventuresDifferentiable2024">Scardapane (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </div></aside></section>
-<section id="why-differentiability" class="slide level2">
-<h2>Why differentiability?</h2>
+<section id="the-meaning-of-differentiation" class="slide level2">
+<h2>The meaning of differentiation</h2>
+<p>Derivatives allow <em>fast</em> sensitivity analysis:</p>
+<ul>
+<li>➡️ for a given input, how much does it affect every output?</li>
+<li>⬅️ for a given output, how much is it affected by every input?</li>
+</ul>
+<p>No need to evaluate small changes in every possible direction</p>
+</section></section>
+<section>
+<section id="optimization-as-a-layer" class="title-slide slide level1 center">
+<h1>Optimization as a layer</h1>
+
+</section>
+<section id="the-gist" class="slide level2">
+<h2>The gist</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Crucial insight</strong></p>
+<p><strong>A strange concept</strong></p>
 </div>
 <div class="callout-content">
-<p>What if we could compute “derivatives of transportation problems” automatically?</p>
+<p>What if we could compute derivatives of transportation problems automatically?</p>
 </div>
 </div>
 </div>
@@ -478,11 +505,9 @@ Guillaume Dalle
 <li><strong>Acceleration</strong>: learn an encoder to improve fast solvers</li>
 <li><strong>Decision-making</strong>: solve bi-level optimization problems</li>
 </ul>
-</section></section>
-<section>
-<section id="optimization-as-a-layer" class="title-slide slide level1 center">
-<h1>Optimization as a layer</h1>
-
+<div style="text-align:center;">
+<p>Machine learning 🤝 constraint satisfaction</p>
+</div>
 </section>
 <section id="parametric-optimization-problems" class="slide level2">
 <h2>Parametric optimization problems</h2>
