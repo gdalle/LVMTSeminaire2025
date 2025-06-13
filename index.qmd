@@ -1,5 +1,5 @@
 ---
-title: "Mixing data, simulation and decision"
+title: "Mixing data, optimization and decision"
 subtitle: "The role of automatic differentiation"
 author: "Guillaume Dalle"
 institute: "LVMT"
@@ -75,7 +75,7 @@ They are easier to analyze and optimize.
 
 # Path problems with congestion
 
-## Basic shortest paths
+## Shortest paths
 
 Most transportation problems live on a graph $G = (V, E)$:
 
@@ -90,7 +90,9 @@ Most transportation problems live on a graph $G = (V, E)$:
 
 Shortest path = sequence of edges $a \to b$ with minimum cost.
 
-Very efficient algorithms available (Dijkstra, A*)... until we add multiple agents 😈
+| Single agent | Interacting agents |
+|---|---|
+| Easy | Hard |
 
 ## Static traffic assignment (theory)
 
@@ -298,19 +300,32 @@ Gradient descent works because individual layers are *differentiable* automatica
 @scardapaneAlicesAdventuresDifferentiable2024
 :::
 
-## Why differentiability?
+## The meaning of differentiation
+
+Derivatives allow *fast* sensitivity analysis:
+
+- ➡️ for a given input, how much does it affect every output?
+- ⬅️ for a given output, how much is it affected by every input?
+
+No need to evaluate small changes in every possible direction
+
+# Optimization as a layer
+
+## The gist
 
 ::: {.callout-tip}
-### Crucial insight
+### A strange concept
 
-What if we could compute "derivatives of transportation problems" automatically?
+What if we could compute derivatives of transportation problems automatically?
 :::
 
 - **Calibration**: fit a large model with gradient descent
 - **Acceleration**: learn an encoder to improve fast solvers
 - **Decision-making**: solve bi-level optimization problems
 
-# Optimization as a layer
+::: {style="text-align:center;"}
+Machine learning 🤝 constraint satisfaction
+:::
 
 ## Parametric optimization problems
 
